@@ -1,0 +1,30 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "browser": {
+    "jquery": "./shim.js",
+    "cbslideheader": "jquery.cb-slideheader.js"
+  },
+  "browserify-shim": {
+    "jquery": "$",
+    "cbslideheader": { "depends": [ "jquery" ] }
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^11.0.1",
+    "browserify-shim": "^3.8.10",
+    "jquery": "^1.11.2",
+    "jquery.cb-slideheader.js": "^0.3.4"
+  }
+}
