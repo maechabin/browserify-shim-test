@@ -7,12 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "browser": {
-    "jquery": "./shim.js",
-    "cbslideheader": "jquery.cb-slideheader.js"
+    "cbslideheader": "./node_modules/cbslideheader/dist/jquery.cbslideheader.min.js"
   },
   "browserify-shim": {
-    "jquery": "$",
-    "cbslideheader": { "depends": [ "jquery" ] }
+    "jquery": "global:$",
   },
   "browserify": {
     "transform": [
@@ -24,7 +22,7 @@
   "devDependencies": {
     "browserify": "^11.0.1",
     "browserify-shim": "^3.8.10",
-    "jquery": "^1.11.2",
-    "jquery.cb-slideheader.js": "^0.3.4"
+    "cbslideheader": "^0.3.5",
+    "jquery": "^1.11.2"
   }
 }
